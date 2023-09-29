@@ -5,10 +5,17 @@
 # Apply sigmoid function to the predicted output
 # calculate cost function 
 # apply gradient descent and update the cost function at every iteration
-# keep iterating untill the log loss is minimized
+# keep iterating until the log loss is minimized
+
 import numpy as np
 from sklearn.datasets import make_classification
 from sklearn.metrics import classification_report
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
+from sklearn.metrics import classification_report
+from sklearn.metrics import precision_score, recall_score, roc_auc_score
+
 
 # step1 generate dummy data
 ClassData = make_classification(n_features =  10, n_samples = 1000 , random_state = 4 )
@@ -56,3 +63,4 @@ yhat = predict(x,w,b)
 sigy = sigmoid(yhat)
 ypred = sigy >= 0.5
 print(classification_report(y,ypred))
+
