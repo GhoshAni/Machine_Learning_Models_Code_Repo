@@ -16,7 +16,6 @@ from sklearn.metrics import accuracy_score
 from sklearn.metrics import classification_report
 from sklearn.metrics import precision_score, recall_score, roc_auc_score
 
-
 # step1 generate dummy data
 ClassData = make_classification(n_features =  10, n_samples = 1000 , random_state = 4 )
 x = ClassData[0]
